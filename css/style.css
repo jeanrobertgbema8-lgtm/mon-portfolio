@@ -1,0 +1,681 @@
+/* ==============================
+   1. REGLAGES GENERAUX
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080f20;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+    color: #168cff;
+}
+
+img {
+    max-width: 90%;
+}
+
+/* ==============================
+   2. NAVIGATION
+============================== */
+
+header {
+    background: #050a16;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1b2942;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
+
+.logo-image {
+    display: block;
+    width: 52px;
+    height: 52px;
+    max-width: none;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #168cff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #d4dbea;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #168cff;
+}
+
+.nav-links a:focus-visible,
+.menu-btn:focus-visible {
+    outline: 2px solid #168cff;
+    outline-offset: 4px;
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* ==============================
+   3. BOUTONS
+============================== */
+
+.btn {
+    display: inline-block;
+    background: #168cff;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 6px;
+    border: 1px solid #168cff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0064c7;
+    transform: translateY(-3px);
+}
+
+.btn-secondaire {
+    background: transparent;
+    color: #168cff;
+}
+
+.btn-secondaire:hover {
+    background: #168cff;
+    color: white;
+}
+
+/* ==============================
+   4. PAGE ACCUEIL
+============================== */
+
+.accueil {
+    min-height: 85vh;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.accueil-content {
+    max-width: 650px;
+}
+
+.petit-titre {
+    color: #168cff;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.accueil-content h1 {
+    font-size: 43px;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+
+.accueil-content h2 {
+    font-size: 23px;
+    color: #c5d3e9;
+    margin-bottom: 15px;
+}
+
+.accueil-content > p:not(.petit-titre) {
+    color: #b9c4d6;
+    margin-bottom: 25px;
+}
+
+.accueil-boutons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.universite {
+    margin-top: 25px;
+    color: #8c9bb3;
+    font-size: 14px;
+}
+
+.accueil-image img {
+    display: block;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #168cff;
+    box-shadow: 0 0 35px rgba(22, 140, 255, 0.2);
+}
+
+/* ==============================
+   5. DOMAINES D'INTERET
+============================== */
+
+.domaines {
+    padding: 65px 8%;
+    background: #0c172b;
+    text-align: center;
+}
+
+.domaines h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.domaines-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.domaine-card {
+    background: #111d35;
+    padding: 25px 15px;
+    border-radius: 10px;
+    border-bottom: 3px solid #168cff;
+    transition: 0.3s;
+}
+
+.domaine-card:hover {
+    transform: translateY(-7px);
+}
+
+.domaine-card h3 {
+    color: #168cff;
+    margin-bottom: 10px;
+}
+
+.domaine-card p {
+    color: #b9c4d6;
+    font-size: 14px;
+}
+
+/* ==============================
+   6. PAGES INTERNES
+============================== */
+
+.page-content {
+    min-height: 85vh;
+    padding: 65px 8%;
+}
+
+.page-content h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #b9c4d6;
+}
+
+/* ==============================
+   7. A PROPOS
+============================== */
+
+.apropos-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 45px;
+    margin-top: 35px;
+}
+
+.apropos-image {
+    flex: 0 0 280px;
+}
+
+.apropos-image .profil-photo {
+    display: block;
+    width: 100%;
+    height: 280px;
+    max-width: none;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 5px solid #168cff;
+    box-shadow: 0 0 35px rgba(22, 140, 255, 0.2);
+}
+
+.apropos-text {
+    flex: 1;
+}
+
+.apropos-text h2 {
+    color: #168cff;
+    margin: 15px 0;
+}
+
+.apropos-text p {
+    color: #c2ccdc;
+    margin-bottom: 15px;
+}
+
+.parcours {
+    background: #111d35;
+    padding: 15px 20px;
+    border-left: 4px solid #168cff;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+.parcours h3 {
+    color: #168cff;
+}
+
+/* ==============================
+   8. COMPETENCES
+============================== */
+
+.competences-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.competence-card {
+    background: #111d35;
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 3px solid #168cff;
+    transition: 0.3s;
+}
+
+.competence-card:hover {
+    transform: translateY(-5px);
+    background: #152542;
+}
+
+.competence-icon {
+    color: #168cff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.competence-card h2 {
+    margin: 12px 0;
+    color: #ffffff;
+}
+
+.competence-card p {
+    color: #b9c4d6;
+    margin-bottom: 18px;
+}
+
+.techno {
+    display: inline-block;
+    background: #203858;
+    color: #80c1ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 4px;
+}
+
+/* ==============================
+   9. PROJETS
+============================== */
+
+.projets-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.projet-card {
+    background: #111d35;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.projet-card:hover {
+    transform: translateY(-7px);
+}
+
+.projet-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.projet-info {
+    padding: 22px;
+}
+
+.projet-numero {
+    color: #168cff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.projet-info h2 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.projet-info p {
+    color: #b9c4d6;
+    margin-bottom: 15px;
+}
+
+.projet-technologies {
+    font-size: 13px;
+}
+
+.statut {
+    display: inline-block;
+    background: #203858;
+    color: #80c1ff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* ==============================
+   10. CITATIONS
+============================== */
+
+.citations-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.citation-card {
+    background: #111d35;
+    padding: 30px;
+    border-left: 4px solid #168cff;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.citation-card:hover {
+    transform: translateY(-5px);
+}
+
+.guillemet {
+    font-size: 55px;
+    line-height: 1;
+    color: #168cff;
+}
+
+.citation-card p {
+    color: #d0d8e5;
+    font-style: italic;
+    margin: 15px 0 20px;
+}
+
+.citation-card h3 {
+    color: #168cff;
+    font-size: 15px;
+    text-align: right;
+}
+
+/* ==============================
+   11. CONTACT
+============================== */
+
+.contact-container {
+    display: flex;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.contact-info,
+.contact form {
+    flex: 1;
+    background: #111d35;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-info h2,
+.contact form h2 {
+    color: #168cff;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    margin-bottom: 22px;
+}
+
+.info-item h3 {
+    color: #168cff;
+    font-size: 15px;
+}
+
+.info-item p {
+    color: #c2ccdc;
+    overflow-wrap: anywhere;
+}
+
+.info-item a {
+    color: #80c1ff;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #34435e;
+    border-radius: 6px;
+    background: #080f20;
+    color: white;
+    outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #168cff;
+}
+
+.contact textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#formMessage {
+    color: #48d597;
+    font-size: 14px;
+}
+
+/* ==============================
+   12. PIED DE PAGE
+============================== */
+
+footer {
+    background: #050a16;
+    text-align: center;
+    padding: 22px;
+    color: #9eabc0;
+    border-top: 1px solid #1b2942;
+}
+
+/* ==============================
+   13. RESPONSIVE MOBILE
+============================== */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .domaines-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projets-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 16px 6%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .logo-image {
+        width: 44px;
+        height: 44px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 55px;
+        left: -7%;
+        width: 114%;
+        background: #050a16;
+        padding: 25px;
+        border-top: 1px solid #1b2942;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 6px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .accueil {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 6%;
+    }
+
+    .accueil-content h1 {
+        font-size: 32px;
+    }
+
+    .accueil-content h2 {
+        font-size: 19px;
+    }
+
+    .accueil-boutons {
+        justify-content: center;
+    }
+
+    .accueil-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .domaines-container {
+        grid-template-columns: 1fr;
+    }
+
+    .apropos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apropos-image {
+        width: 220px;
+        flex-basis: auto;
+    }
+
+    .apropos-image .profil-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .competences-container,
+    .projets-container,
+    .citations-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .page-content {
+        padding: 45px 6%;
+    }
+
+    .page-content h1 {
+        font-size: 29px;
+    }
+}

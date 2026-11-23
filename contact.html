@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Gbema | Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="index.html" class="logo" aria-label="Accueil — J. Robert Gbema">
+                <img src="css/js/images/logo.jpg" alt="J. Robert Gbema" class="logo-image">
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-controls="navLinks" aria-expanded="false">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="citation.html">Citations</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+
+        <section class="contact">
+            <h2>Contactez-<span>moi</span></h2>
+
+            <p class="contact-intro">
+                Vous souhaitez me contacter ? Remplissez le formulaire ci-dessous.
+            </p>
+
+            <div class="contact-container">
+
+                <div class="contact-info">
+                    <h3>Mes coordonnées</h3>
+
+                    <p><strong>Nom :</strong> Robert Gbema</p>
+
+                    <p>
+                        <strong>Téléphone :</strong>
+                        <a href="tel:0979924301">0979924301</a>
+                    </p>
+
+                    <p>
+                        <strong>Instagram :</strong>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            Robert Gbema
+                        </a>
+                    </p>
+                </div>
+
+                <form id="contactForm">
+
+                    <input type="text" id="nom"
+                        placeholder="Votre nom" required>
+
+                    <input type="email" id="email"
+                        placeholder="Votre adresse e-mail" required>
+
+                    <input type="text" id="sujet"
+                        placeholder="Sujet du message" required>
+
+                    <textarea id="message"
+                        placeholder="Votre message" required></textarea>
+
+                    <button type="submit" class="btn">
+                        Envoyer le message
+                    </button>
+
+                    <p id="formMessage"></p>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Robert Gbema. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
